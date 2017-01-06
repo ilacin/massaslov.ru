@@ -190,6 +190,21 @@ font-family:verdana;
 font-size:11px;
 }
 
+#searchbuttonmain {
+	width: 200px;
+}
+
+#searchbuttonmobile {
+	width: 200px;
+	height: 70px;
+	border:1px solid #ccc;
+	background:#f7f7f7;
+	text-align:center;
+	color:#333;
+	font-family:;
+	font-size:16px;
+	margin-top: 10px;
+}
 
 
 @media (max-width: 768px) {
