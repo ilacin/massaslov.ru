@@ -70,7 +70,7 @@ $('body,html').animate({scrollTop:0},800);
 	</div>
     
  
-        <div>
+        <div class="searchpane">
 			<div>    
 			<h1>Русско-русский иллюстрированный словарь</h1>
               <form action="index.php" method='get'>
