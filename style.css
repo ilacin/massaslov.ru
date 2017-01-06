@@ -54,6 +54,11 @@ a, a:hover {text-decoration: none;}
 	margin: 0 left;
 }
 
+.searchpane {
+	max-width: px;
+	margin: 0 auto;
+}
+
 .nav,
 #touch-menu {
 	background: #3e4156;
