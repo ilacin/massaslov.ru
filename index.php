@@ -72,6 +72,7 @@ $('body,html').animate({scrollTop:0},800);
  
         <div>
 			<div>    
+			<h1>Русско-русский иллюстрированный словарь</h1>
               <form action="index.php" method='get'>
 			  <p id="searching"><label>В этом словаре можно посмотреть картинки слов.<br><br><br>
                 <input type="text" name='word' size="98%" id='inputword' placeholder="Введите сюда слово">
