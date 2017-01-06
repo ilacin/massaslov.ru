@@ -60,12 +60,12 @@ $('body,html').animate({scrollTop:0},800);
 		<a href="#" id="touch-menu">Меню</a>
 		<nav>
 			<ul class="nav clearfix">
-				<li><a href="#">Поиск слов</a></li>
-				<li><a href="#">О словаре</a></li>
-				<li><a href="#">Условия пользования</a></li>
-				<li><a href="#">Связаться</a></li>
-				<li><a href="#">Технология обучения</a></li>
-				<li><a href="#">Куда поместить сайт?</a></li>
+				<li><a href="index.php">Поиск слов</a></li>
+				<li><a href="dictionary.php">О словаре</a></li>
+				<li><a href="agreement.php">Условия пользования</a></li>
+				<li><a href="contacts.php">Связаться</a></li>
+				<li><a href="http://саентология-дианетика.рф/1/_12_43">Технология обучения</a></li>
+				<li><a href="https://beget.com/p344930" target="_blank">Куда поместить сайт?</a></li>
 			</ul>
 		</nav>
 	</div>
