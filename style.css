@@ -1,29 +1,17 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+body {
 	margin: 0;
 	padding: 0;
 	border: 0;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	height: 100%;
+	font: 18px/24px Arial, Tahoma, sans-serif;
 }
 html {height: 100%;}
-body {
-	height: 100%;
-	font: 14px/24px Arial, Tahoma, sans-serif;
-	background-color: #FFFFF0;
-}
+
+
+
 ol, ul {list-style: none;}
 * {
 	margin: 0;
@@ -50,18 +38,95 @@ a, a:hover {text-decoration: none;}
 .text-right {text-align: right;}
 
 .container {
-	max-width: 250px;
-	margin: 0 left;
+	background: ;
+	width: 300px;
+	position: fixed;
+	left: 1%;
+	top: 130px;
+	height: ;
+}
+
+h1 {
+	color: #C32017;
+	padding: 25px;
+	margin-bottom: 50px;
+}
+
+h4 { 
+    font-style : normal ;na
+    font-weight :normal;
+	color: blue;
+    } 
+	
+	#ad {
+	width:98%;
+	height: 90px;
+	background-color: LemonChiffon;
+	text-align: center;
+	border: 4px dashed #CD5C5C;
+	margin: 15px;
+	padding-top:25px;
+	font-size:36px;
+}
+
+h6 { 
+    font-style : normal ;
+    font-size : 18px; 
+    font-weight :normal;
+    text-align : left;
+    text-indent : 1em;
+	padding-top: 25px;
+    padding-left : 10px;
+	padding-right: 10px;
+    background-color: LemonChiffon;
+	color: #C32017;
+    } 
+
+p { 
+    font-style : normal ;
+    font-size : 18px; 
+    font-weight :normal;
+    text-align : left;
+    text-indent : 1em;
+    padding-left : 10px;
+	padding-right: 10px;
+    background-color: LemonChiffon;
+    } 
+	
+	
+	
+	#searching {
+	color: #C32017;
+	position: ;
+	background-color: ;
 }
 
 .searchpane {
-	max-width: px;
-	margin: 0 auto;
+	position: relative;
+	left: 320px;
+	right: 1%;
+	top: 11px;
+	min-height: 200%;
+	min-width: 400px;
+	max-width: 78%;
+	padding-left: px;
+	padding-right: 0px;
+}
+
+#mobilesearch {display: none;}
+
+.text_block{
+	overflow: hidden;
+	color:#4a4a4a;
+	font-size: 18px;
+	line-height: 24px;
+	min-height: 200px;
+	
 }
 
 .nav,
 #touch-menu {
-	background: #3e4156;
+	background: blue;
 }
 .nav li {float: ;}
 .nav li a,
@@ -101,17 +166,9 @@ td {
 	padding: 4px 7px;
 }
 
-#ad{
-	width:98%;
-	height: 90px;
-	background-color:#FFDEAD;
-	text-align: center;
-	border: 4px dashed #CD5C5C;
-	margin: 15px;
-	padding-top:10px;
-	font:36px;
 
-}
+
+
 
 label {
 	cursor:pointer;
@@ -122,7 +179,7 @@ width:100px;
 border:1px solid #ccc;
 background:#f7f7f7;
 text-align:center;
-padding:5px;
+padding:10px;
 position:fixed;
 bottom:10px; /* отступ кнопки от нижнего края страницы*/
 right:10px;
@@ -133,11 +190,7 @@ font-family:verdana;
 font-size:11px;
 }
 
-#searching {
-	color: #C32017;
-	position: ;
-	background-color: ;
-}
+
 
 @media (max-width: 768px) {
 	.nav {display: none;}
@@ -156,4 +209,39 @@ font-size:11px;
 	}
 	#touch-menu {display: block;}
 	#ad {display: none;}
+	
+	.container {
+	background: ;
+	width: 250px;
+	position: fixed;
+	left: 1%;
+	top: 1px;
+	height: ;
+	margin-bottom: 5px;
+	z-index: 5;
 }
+
+.searchpane {
+	position: relative;
+	left: 1%;
+	right: ;
+	top: px;
+	background: #ffffff;
+	min-height: 200%;
+	min-width: 250px;
+	max-width: 78%;
+	padding-left: px;
+	padding-right: 0px;
+	margin-top: 50px;
+}
+
+h1 {display: none;}
+
+#mainsearch {display: none;}
+
+#mobilesearch {
+	display: block;
+	}
+
+}
+

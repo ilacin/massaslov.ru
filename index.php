@@ -6,6 +6,7 @@
 <title>Словарь с картинками</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript" ></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript" ></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
 			var touch = $('#touch-menu');
@@ -71,11 +72,17 @@ $('body,html').animate({scrollTop:0},800);
     
  
         <div class="searchpane">
-			<div>    
+			<div class="text_block">    
 			<h1>Русско-русский иллюстрированный словарь</h1>
-              <form action="index.php" method='get'>
+              <form action="index.php" method='get' id="mainsearch">
 			  <p id="searching"><label>В этом словаре можно посмотреть картинки слов.<br><br><br>
-                <input type="text" name='word' size="98%" id='inputword' placeholder="Введите сюда слово">
+                <input type="text" name='word' size="98%" id='inputword' placeholder="&nbspВведите сюда слово">
+	        <input type='submit' value='Поиск'></label></p>
+              </form>
+			  
+			  <form action="index.php" method='get' id="mobilesearch">
+			  <p id="searching"><label>В словаре можно посмотреть картинки слов.<br><br><br>
+                <input type="text" name='word' size="30%" id='inputword' placeholder="&nbspВведите сюда слово">
 	        <input type='submit' value='Поиск'></label></p>
               </form>
 			
@@ -86,7 +93,7 @@ $gk=$_GET['word'];
 
 if (empty($gk))
 {
-echo "<p><label for='inputword'>Нужно ввести слово</label></p>";
+echo "<h6><label for='inputword'>Нужно ввести слово</label></h6>";
 }
 if(isset($gk))
 {
@@ -94,7 +101,7 @@ $query = mysql_query("SELECT * FROM maccaclovcomtable WHERE `title` LIKE '".$gk.
 $row = mysql_fetch_array($query);
 if (empty($row) AND !empty($gk))
 {
-echo "<p><label for='inputword'>Такого выражения нет в словаре</label></p>";
+echo "<h6><label for='inputword'>Такого выражения нет в словаре</label></h6>";
 }
 }
 
