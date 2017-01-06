@@ -77,13 +77,13 @@ $('body,html').animate({scrollTop:0},800);
               <form action="index.php" method='get' id="mainsearch">
 			  <p id="searching"><label>В этом словаре можно посмотреть картинки слов.<br><br><br>
                 <input type="text" name='word' size="98%" id='inputword' placeholder="&nbspВведите сюда слово">
-	        <input type='submit' value='Поиск'></label></p>
+	        <input type='submit' value='Поиск' id='searchbuttonmain'></label></p>
               </form>
 			  
 			  <form action="index.php" method='get' id="mobilesearch">
 			  <p id="searching"><label>В словаре можно посмотреть картинки слов.<br><br><br>
                 <input type="text" name='word' size="30%" id='inputword' placeholder="&nbspВведите сюда слово">
-	        <input type='submit' value='Поиск'></label></p>
+	        <input type='submit' value='Поиск' id='searchbuttonmobile'></label></p>
               </form>
 			
 <?php
