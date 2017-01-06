@@ -22,7 +22,7 @@ html {height: 100%;}
 body {
 	height: 100%;
 	font: 14px/24px Arial, Tahoma, sans-serif;
-	background-color: #ebebeb;
+	background-color: #FFFFF0;
 }
 ol, ul {list-style: none;}
 * {
@@ -50,15 +50,15 @@ a, a:hover {text-decoration: none;}
 .text-right {text-align: right;}
 
 .container {
-	max-width: 960px;
-	margin: 0 auto;
+	max-width: 250px;
+	margin: 0 left;
 }
 
 .nav,
 #touch-menu {
 	background: #3e4156;
 }
-.nav li {float: left;}
+.nav li {float: ;}
 .nav li a,
 #touch-menu {
 	display: block;
@@ -73,6 +73,66 @@ a, a:hover {text-decoration: none;}
 }
 
 #touch-menu {display: none;}
+
+img {
+	padding:10px 10px 10px 10px;
+	border:1px solid;
+	background-color:#00FFFF;
+	margin:0 10px 0 0;
+}
+
+table {
+	border-collapse:collapse;
+}
+
+th {
+   empty-cells: hide;
+   padding: 4px 7px;
+   background-color:#FFD700;
+}
+
+td {
+	empty-cells: hide;
+	padding: 4px 7px;
+}
+
+#ad{
+	width:98%;
+	height: 90px;
+	background-color:#FFDEAD;
+	text-align: center;
+	border: 4px dashed #CD5C5C;
+	margin: 15px;
+	padding-top:10px;
+	font:36px;
+
+}
+
+label {
+	cursor:pointer;
+}
+
+#toTop {
+width:100px;
+border:1px solid #ccc;
+background:#f7f7f7;
+text-align:center;
+padding:5px;
+position:fixed;
+bottom:10px; /* отступ кнопки от нижнего края страницы*/
+right:10px;
+cursor:pointer;
+display:none;
+color:#333;
+font-family:verdana;
+font-size:11px;
+}
+
+#searching {
+	color: #C32017;
+	position: ;
+	background-color: ;
+}
 
 @media (max-width: 768px) {
 	.nav {display: none;}
@@ -90,4 +150,5 @@ a, a:hover {text-decoration: none;}
 		border-left: 3px solid #515572;
 	}
 	#touch-menu {display: block;}
+	#ad {display: none;}
 }
