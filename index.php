@@ -69,22 +69,24 @@ $('body,html').animate({scrollTop:0},800);
 			</ul>
 		</nav>
 	</div>
+	
+
     
  
         <div class="searchpane">
 			<div class="text_block">    
 			<h1>Русско-русский иллюстрированный словарь</h1>
               <form action="index.php" method='get' id="mainsearch">
-			  <p id="searching"><label>В этом словаре можно посмотреть картинки слов.<br><br><br>
+			  <p id="searching"><label>В этом словаре можно посмотреть картинки слов<br><br><br>
                 <input type="text" name='word' size="98%" id='inputword' placeholder="&nbspВведите сюда слово">
 	        <input type='submit' value='Поиск' id='searchbuttonmain'></label></p>
               </form>
 			  
 			  <form action="index.php" method='get' id="mobilesearch">
-			  <p id="searching"><label>В словаре можно посмотреть картинки слов.<br><br><br>
-                <input type="text" name='word' size="30%" id='inputword' placeholder="&nbspВведите сюда слово">
-	        <input type='submit' value='Поиск' id='searchbuttonmobile'></label></p>
-              </form>
+			  <p><input type='submit' value='Поиск' id='searchbuttonmobile'></p>
+			   <p id="searching"><label>В словаре можно посмотреть картинки слов<br>
+                <input type="text" name='word' size="30%" id='inputword' placeholder="&nbspВведите сюда слово"></label></p>
+	       </form><br><br><br>
 			
 <?php
 include('db.php');
@@ -120,32 +122,32 @@ echo "<br>";
 
 if (!empty($row['othernames']))
 {
-echo "<p><b>Другие названия</b>:</p>";
+echo "<h3>Другие названия:</h3>";
 }
 echo $row['othernames'];
 
 if (!empty($row['latinnames']))
 {
-echo "<p><b>Латинские названия</b>:</p>";
+echo "<h3>Латинские названия:</h3>";
 }
 echo $row['latinnames'];
 
 if (!empty($row['examples']))
 {
-echo "<p><b>Примеры употребления</b>:</p>";
+echo "<h3>Примеры употребления:</h3>";
 }
 echo $row['examples'];
 echo "<br>";
 
 if (!empty($row['ffilms']))
 {
-echo "<p><b>Художественные фильмы</b>:</p>";
+echo "<h3>Художественные фильмы:<h3>";
 }
 echo $row['ffilms'];
 echo "<br>";
 if (!empty($row['dfilms']))
 {
-echo "<p><b>Документальные фильмы</b>:</p>";
+echo "<h3>Документальные фильмы:</h3>";
 }
 echo $row['dfilms'];
 echo "<br>";
@@ -186,21 +188,21 @@ echo "<br>";
 
 if (!empty($row['bibliography']))
 {
-echo "<p><b>Дополнительные данные</b>:</p>";
+echo "<h3>Дополнительные данные:</h3>";
 }
 echo $row['bibliography'];
 
 
 if (!empty($row['ronhubbard']))
 {
-echo "<p><b>Дополнительные данные у Рона Хаббарда</b>:</p>";
+echo "<h3>Дополнительные данные у Рона Хаббарда:</h3>";
 }
 echo $row['ronhubbard'];
 
 
 if (!empty($row['similarwords']))
 {
-echo "<p><b>Похожие слова</b>:</p>";
+echo "<h3>Похожие слова:</h3>";
 }
 echo $row['similarwords'];
 }
