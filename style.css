@@ -47,21 +47,27 @@ a, a:hover {text-decoration: none;}
 }
 
 h1 {
-	color: #C32017;
+	color:#C5007F;
 	padding: 25px;
 	margin-bottom: 50px;
+}
+
+h3 {
+	color: #808080;
+	padding-bottom: 15px;
+	padding-left: 30px;
 }
 
 h4 { 
     font-style : normal ;na
     font-weight :normal;
-	color: blue;
+	color: #808080;
     } 
 	
 	#ad {
 	width:98%;
 	height: 90px;
-	background-color: LemonChiffon;
+	background-color: #FDEAA8;
 	text-align: center;
 	border: 4px dashed #CD5C5C;
 	margin: 15px;
@@ -78,8 +84,8 @@ h6 {
 	padding-top: 25px;
     padding-left : 10px;
 	padding-right: 10px;
-    background-color: LemonChiffon;
-	color: #C32017;
+    background-color: #FDEAA8;
+	color:#C5007F;
     } 
 
 p { 
@@ -90,13 +96,14 @@ p {
     text-indent : 1em;
     padding-left : 10px;
 	padding-right: 10px;
-    background-color: LemonChiffon;
+	color:#C5007F;
+    background-color: #FDEAA8;
     } 
 	
 	
 	
 	#searching {
-	color: #C32017;
+	color: #C5007F;
 	position: ;
 	background-color: ;
 }
@@ -117,7 +124,7 @@ p {
 
 .text_block{
 	overflow: hidden;
-	color:#4a4a4a;
+	color:#C5007F;
 	font-size: 18px;
 	line-height: 24px;
 	min-height: 200px;
@@ -126,7 +133,7 @@ p {
 
 .nav,
 #touch-menu {
-	background: blue;
+	background: #FF00FF;
 }
 .nav li {float: ;}
 .nav li a,
@@ -135,7 +142,7 @@ p {
 	padding: 10px 15px;
 	font-weight: bold;
 	font-size: 14px;
-	color: #fff;
+	color: white;
 }
 .nav li a:hover,
 #touch-menu:hover {
@@ -152,20 +159,29 @@ img {
 }
 
 table {
-	border-collapse:collapse;
+	width: 100%;
+}
+
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+  background: #eee; 
 }
 
 th {
-   empty-cells: hide;
    padding: 4px 7px;
    background-color:#FFD700;
 }
 
+
+
 td {
-	empty-cells: hide;
 	padding: 4px 7px;
 }
 
+li {
+	font-size: 18px;
+	color: #A52A2A;
+}
 
 
 
@@ -185,7 +201,7 @@ bottom:10px; /* отступ кнопки от нижнего края стра�
 right:10px;
 cursor:pointer;
 display:none;
-color:#333;
+color: #C5007F;
 font-family:verdana;
 font-size:11px;
 }
@@ -200,10 +216,11 @@ font-size:11px;
 	border:1px solid #ccc;
 	background:#f7f7f7;
 	text-align:center;
-	color:#333;
+	color:#C5007F;
 	font-family:;
 	font-size:16px;
-	margin-top: 10px;
+	margin-bottom: 15px;
+	margin-top: 15px;
 }
 
 
@@ -213,13 +230,13 @@ font-size:11px;
 	.nav li a {
 		border-top: 1px solid #eee;
 		border-left: 3px solid transparent;
-		background: #fff;
-		color: #666;
+		background: #808080;
+		color: #s;
 	}
 	.nav li:first-child a {border-top: none;}
 	.nav li a:hover {
 		background: #f0f0f0;
-		color: #444;
+		color: #C5007F;
 		border-left: 3px solid #515572;
 	}
 	#touch-menu {display: block;}
@@ -257,6 +274,59 @@ h1 {display: none;}
 #mobilesearch {
 	display: block;
 	}
+	
+	img {
+    max-width: 100%;
+    height: auto;
+}
+
+iframe {
+	max-width: 100%;
+	height: auto;
+}
+	/* Таблица больше не обычная таблица */
+    table, thead, tbody, th, td, tr { 
+        display: block; 
+    }
+ 
+    /* Скрываем заголовки */
+    thead tr { 
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+ 
+    tr { border: 1px solid #ccc; }
+ 
+    td { 
+        /* Ведет себя как строка */
+        border: none;
+        border-bottom: 1px solid #eee; 
+        position: relative;
+        padding-left: 50%; 
+    }
+ 
+    td:before { 
+        /* Теперь как заголовок таблицы */
+        position: absolute;
+        /* Отступы сверху и слева */
+        top: 6px;
+        left: 6px;
+        width: 45%; 
+        padding-right: 10px; 
+        white-space: nowrap;
+    }
+ 
+    /*
+    Заголовки
+    */
+    td:nth-of-type(1):before { content: "Русское"; }
+    td:nth-of-type(2):before { content: "МФА"; }
+    td:nth-of-type(3):before { content: "МФА пох."; }
+    td:nth-of-type(4):before { content: "Расшир. л."; }
+    td:nth-of-type(5):before { content: "Романиз."; }
+    
+}
 
 }
 
