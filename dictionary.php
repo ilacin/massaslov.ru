@@ -69,145 +69,40 @@ $('body,html').animate({scrollTop:0},800);
 			</ul>
 		</nav>
 	</div>
+	
+
     
  
         <div class="searchpane">
 			<div class="text_block">    
 			<h1>Русско-русский иллюстрированный словарь</h1>
-              <form action="index.php" method='get' id="mainsearch">
-			  <p id="searching"><label>В этом словаре можно посмотреть картинки слов.<br><br><br>
-                <input type="text" name='word' size="98%" id='inputword' placeholder="&nbspВведите сюда слово">
-	        <input type='submit' value='Поиск'></label></p>
-              </form>
-			  
-			  <form action="index.php" method='get' id="mobilesearch">
-			  <p id="searching"><label>В словаре можно посмотреть картинки слов.<br><br><br>
-                <input type="text" name='word' size="30%" id='inputword' placeholder="&nbspВведите сюда слово">
-	        <input type='submit' value='Поиск'></label></p>
-              </form>
-			
+              <p>
+&#1069;&#1090;&#1086;&#1090; &#1089;&#1083;&#1086;&#1074;&#1072;&#1088;&#1100; &#1087;&#1088;&#1077;&#1076;&#1085;&#1072;&#1079;&#1085;&#1072;&#1095;&#1077;&#1085; &#1076;&#1083;&#1103; &#1087;&#1086;&#1083;&#1091;&#1095;&#1077;&#1085;&#1080;&#1103; &#1090;&#1086;&#1075;&#1086;, &#1095;&#1090;&#1086; &#1085;&#1072;&#1079;&#1099;&#1074;&#1072;&#1077;&#1090;&#1089;&#1103; &#1084;&#1072;&#1089;&#1089;&#1086;&#1081;, &#1090;&#1086; &#1077;&#1089;&#1090;&#1100; &#1090;&#1086;&#1075;&#1086;, &#1095;&#1090;&#1086; &#1087;&#1086;&#1076;&#1088;&#1072;&#1079;&#1091;&#1084;&#1077;&#1074;&#1072;&#1077;&#1090;&#1089;&#1103; &#1087;&#1086;&#1076; &#1082;&#1072;&#1082;&#1080;&#1084;-&#1085;&#1080;&#1073;&#1091;&#1076;&#1100;
+&#1089;&#1083;&#1086;&#1074;&#1086;&#1084;. &#1044;&#1083;&#1103; &#1089;&#1083;&#1086;&#1074;&#1072; "&#1082;&#1086;&#1096;&#1082;&#1072;" &#1084;&#1072;&#1089;&#1089;&#1086;&#1081; &#1073;&#1091;&#1076;&#1077;&#1090; &#1089;&#1072;&#1084;&#1072; &#1082;&#1086;&#1096;&#1082;&#1072;. &#1053;&#1086; &#1082;&#1072;&#1088;&#1090;&#1080;&#1085;&#1082;&#1072; &#1076;&#1072;&#1077;&#1090; &#1086;&#1073;&#1077;&#1097;&#1072;&#1085;&#1080;&#1077; &#1085;&#1072; &#1084;&#1072;&#1089;&#1089;&#1091;.
+         </p>
+<?php
+ include('db.php');
+ $res = mysql_query("SELECT COUNT(*) FROM maccaclovcomtable");
+ $countrow = mysql_fetch_row($res);
+ $total = $countrow[0]; // &#1074;&#1089;&#1077;&#1075;&#1086; &#1079;&#1072;&#1087;&#1080;&#1089;&#1077;&#1081;
+ echo "<p>&#1057;&#1077;&#1081;&#1095;&#1072;&#1089; &#1074; &#1089;&#1083;&#1086;&#1074;&#1072;&#1088;&#1077; $total единиц(а/ы) (значений/словоформ).</p>";
+?>
+
+
 <?php
 include('db.php');
-
-$gk=$_GET['word'];
-
-if (empty($gk))
-{
-echo "<h6><label for='inputword'>Нужно ввести слово</label></h6>";
-}
-if(isset($gk))
-{
-$query = mysql_query("SELECT * FROM maccaclovcomtable WHERE `title` LIKE '".$gk."'");
-$row = mysql_fetch_array($query);
-if (empty($row) AND !empty($gk))
-{
-echo "<h6><label for='inputword'>Такого выражения нет в словаре</label></h6>";
-}
-}
-
+$query = mysql_query("SELECT * FROM maccaclovcomtable WHERE id='1'");
 do
 {
 echo $row['definition'];
 echo "<br>";
-echo $row['pronunciation'];
-echo "<br>";
 echo $row['picture'];
 echo "<br>";
 echo "<br>";
-echo $row['wikipictures'];
-echo "<br>";
-echo "<br>";
-
-if (!empty($row['othernames']))
-{
-echo "<p><b>Другие названия</b>:</p>";
-}
-echo $row['othernames'];
-
-if (!empty($row['latinnames']))
-{
-echo "<p><b>Латинские названия</b>:</p>";
-}
-echo $row['latinnames'];
-
-if (!empty($row['examples']))
-{
-echo "<p><b>Примеры употребления</b>:</p>";
-}
 echo $row['examples'];
-echo "<br>";
-
-if (!empty($row['ffilms']))
-{
-echo "<p><b>Художественные фильмы</b>:</p>";
-}
-echo $row['ffilms'];
-echo "<br>";
-if (!empty($row['dfilms']))
-{
-echo "<p><b>Документальные фильмы</b>:</p>";
-}
-echo $row['dfilms'];
-echo "<br>";
-echo $row['links0'];
-echo "<br>";
-echo "<br>";
-echo $row['links'];
-echo "<br>";
-echo "<br>";
-echo $row['links1'];
-echo "<br>";
-echo "<br>";
-echo $row['links2'];
-echo "<br>";
-echo "<br>";
-echo $row['links3'];
-echo "<br>";
-echo "<br>";
-echo $row['links4'];
-echo "<br>";
-echo "<br>";
-echo $row['links5'];
-echo "<br>";
-echo "<br>";
-echo $row['links6'];
-echo "<br>";
-echo "<br>";
-echo $row['links7'];
-echo "<br>";
-echo $row['links8'];
-echo "<br>";
-echo $row['links9'];
-echo "<br>";
-echo $row['links10'];
-echo "<br>";
-echo $row['links11'];
-echo "<br>";
-
-if (!empty($row['bibliography']))
-{
-echo "<p><b>Дополнительные данные</b>:</p>";
-}
-echo $row['bibliography'];
-
-
-if (!empty($row['ronhubbard']))
-{
-echo "<p><b>Дополнительные данные у Рона Хаббарда</b>:</p>";
-}
-echo $row['ronhubbard'];
-
-
-if (!empty($row['similarwords']))
-{
-echo "<p><b>Похожие слова</b>:</p>";
-}
-echo $row['similarwords'];
 }
 while($row = mysql_fetch_array($query))
 ?>
-</div>
-</div>
 
       
 <DIV ID = "toTop" > ^ Наверх </ DIV >
