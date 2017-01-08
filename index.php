@@ -77,15 +77,15 @@ $('body,html').animate({scrollTop:0},800);
 			<div class="text_block">    
 			<h1>Русско-русский иллюстрированный словарь</h1>
               <form action="index.php" method='get' id="mainsearch">
-			  <p id="searching"><label>В этом словаре можно посмотреть картинки слов<br><br><br>
-                <input type="text" name='word' size="98%" id='inputword' placeholder="&nbspВведите сюда слово">
-	        <input type='submit' value='Поиск' id='searchbuttonmain'></label></p>
+			  <p class="searching"><label>В этом словаре можно посмотреть картинки слов<br>
+                <input type="text" name='word' size="98%" class='inputword' placeholder="&nbsp;Введите сюда слово"></label>
+	        <input type='submit' value='Поиск' id='searchbuttonmain'></p>
               </form>
 			  
 			  <form action="index.php" method='get' id="mobilesearch">
 			  <p><input type='submit' value='Поиск' id='searchbuttonmobile'></p>
-			   <p id="searching"><label>В словаре можно посмотреть картинки слов<br>
-                <input type="text" name='word' size="30%" id='inputword' placeholder="&nbspВведите сюда слово"></label></p>
+			   <p class="searching"><label>В словаре можно посмотреть картинки слов<br>
+                <input type="text" name='word' size="30%" class='inputword' placeholder="&nbsp;Введите сюда слово"></label></p>
 	       </form><br><br><br>
 			
 <?php
