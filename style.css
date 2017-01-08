@@ -46,34 +46,37 @@ a, a:hover {text-decoration: none;}
 	height: ;
 }
 
-h1 {
-	color:#C5007F;
-	padding: 25px;
-	margin-bottom: 50px;
-}
-
-h3 {
-	color: #808080;
-	padding-bottom: 15px;
-	padding-left: 30px;
-}
-
 h4 { 
-    font-style : normal ;na
-    font-weight :normal;
+    font-style: normal;
+    font-weight: normal;
 	color: #808080;
     } 
 	
 	#ad {
 	width:98%;
-	height: 90px;
+	height: 60px;
 	background-color: #FDEAA8;
 	text-align: center;
 	border: 4px dashed #CD5C5C;
-	margin: 15px;
-	padding-top:25px;
-	font-size:36px;
+	margin-top: 5px;
+	margin-left: 20px;
+	padding: 10px;
+	font-size:25px;
 }
+
+h1 {
+	color: #C5007F;
+	padding-top: 5px;
+	padding-left: 27px;
+	margin-bottom: 25px;
+}
+
+h3 {
+    margin-bottom: 10px;
+    color: #808080;
+    padding-left : 28px;
+}
+
 
 h6 { 
     font-style : normal ;
@@ -102,7 +105,7 @@ p {
 	
 	
 	
-	#searching {
+	.searching {
 	color: #C5007F;
 	position: ;
 	background-color: ;
@@ -159,29 +162,24 @@ img {
 }
 
 table {
-	width: 100%;
-}
-
-/* Zebra striping */
-tr:nth-of-type(odd) { 
-  background: #eee; 
+	border-collapse:collapse;
 }
 
 th {
+   empty-cells: hide;
    padding: 4px 7px;
    background-color:#FFD700;
 }
 
-
-
 td {
+	empty-cells: hide;
 	padding: 4px 7px;
 }
 
 li {
-	font-size: 18px;
-	color: #A52A2A;
+    color: #C5007F;
 }
+
 
 
 
@@ -275,58 +273,11 @@ h1 {display: none;}
 	display: block;
 	}
 	
-	img {
-    max-width: 100%;
-    height: auto;
-}
-
-iframe {
-	max-width: 100%;
-	height: auto;
-}
-	/* Таблица больше не обычная таблица */
-    table, thead, tbody, th, td, tr { 
-        display: block; 
-    }
- 
-    /* Скрываем заголовки */
-    thead tr { 
-        position: absolute;
-        top: -9999px;
-        left: -9999px;
-    }
- 
-    tr { border: 1px solid #ccc; }
- 
-    td { 
-        /* Ведет себя как строка */
-        border: none;
-        border-bottom: 1px solid #eee; 
-        position: relative;
-        padding-left: 50%; 
-    }
- 
-    td:before { 
-        /* Теперь как заголовок таблицы */
-        position: absolute;
-        /* Отступы сверху и слева */
-        top: 6px;
-        left: 6px;
-        width: 45%; 
-        padding-right: 10px; 
-        white-space: nowrap;
-    }
- 
-    /*
-    Заголовки
-    */
-    td:nth-of-type(1):before { content: "Русское"; }
-    td:nth-of-type(2):before { content: "МФА"; }
-    td:nth-of-type(3):before { content: "МФА пох."; }
-    td:nth-of-type(4):before { content: "Расшир. л."; }
-    td:nth-of-type(5):before { content: "Романиз."; }
-    
-}
+	iframe {max-width: 100%; height: auto;}
+	
+	img {max-width: 100%; height: auto;}
+	
+	table {max-width: 100%;}
 
 }
 
